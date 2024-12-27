@@ -1,0 +1,36 @@
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 25px;
+    background-color: #fff;
+}
+.logo-div a{
+    display: flex;
+    flex-direction: row;
+    text-decoration: none;
+    color: black;
+    align-items: center;
+    gap: 6px;
+}
+.logo{
+    width: 45px;
+}
+.logo-div h2{
+    font-size: 28px;
+    /* font-style: italic; */
+    font-family: "Fondamento", serif;
+    margin-bottom: 0;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0;
+}
+.nav-links ul{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    margin-bottom: 0;
+}

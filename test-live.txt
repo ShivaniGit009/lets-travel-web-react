@@ -1,0 +1,122 @@
+import React from 'react'
+import homevideo from '../../img/home/homepg-video.mp4';
+// import Swiper core and required modules
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+
+import 'swiper/css/pagination';
+import {  Autoplay } from 'swiper/modules';
+
+const data = [
+  {
+      id: 1,
+      title: 'Ready To Move Office',
+      text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      imgSrc: 'https://whichfloor.in/_next/image?url=%2Fimages%2Fhome%2FCommercial%20Project%20Image.webp&w=2048&q=75',
+      
+  },
+  {
+      id: 2,
+      title: 'Commercial Project',
+      text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      imgSrc: 'https://whichfloor.in/_next/image?url=%2Fimages%2Fhome%2FCommercial%20Properties%20Image.webp&w=2048&q=75',
+     
+  },
+  {
+      id: 3,
+      title: 'Managed Office',
+      text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      imgSrc: 'https://whichfloor.in/_next/image?url=%2Fimages%2Fhome%2FManaged%20Office%20Image.webp&w=2048&q=75',
+      
+  },
+  {
+      id: 4,
+      title: 'Pleased Properties',
+      text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      imgSrc: 'https://whichfloor.in/_next/image?url=%2Fimages%2Fhome%2FPre-leased%20Image.webp&w=2048&q=75',
+     
+  },
+  {
+      id: 5,
+      title: 'Coworking Office',
+      text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      imgSrc: 'https://whichfloor.in/_next/image?url=%2Fimages%2Fhome%2FCo-working%20Image.webp&w=2048&q=75',
+     
+  },
+  {
+      id: 6,
+      title: 'Upcoming Project',
+      text: 'Some quick example text to build on the card title and make up the bulk of the card\'s content.',
+      imgSrc: 'https://whichfloor.in/_next/image?url=%2Fimages%2Fhome%2FupcomingProject.jpg&w=2048&q=75',
+     
+  }
+];
+
+const Home = ({data}) => {
+  return (
+    <div>
+      <section>
+        {/* <div>
+          <video width="320" height="240" controls autoplay>
+            <source src="" type="video/mp4" />
+          </video>
+        </div> */}
+
+        <div>
+        <video className='background-video' autoPlay loop muted >
+          <source src={homevideo} type="video/mp4" />
+        </video>
+        </div>
+      </section>
+
+      <section className="single-line-sect">
+        <div className="container">
+          <div className="single-line-txt-home">
+            <h4>"Every journey begins with a single step, but it’s the winding paths, hidden trails, and endless horizons that call to our hearts, leading us not just to new places, but to moments that change us forever, painting memories in colors we never knew existed."</h4>
+          </div>
+        </div>
+      </section>
+
+      <section>
+      <div className="swiper-container mt-5">
+      {/* Title and Description */}
+      <div className=" ">
+        <h3 className="">Premium Locations For Your Office Space Requirement</h3>
+        <p>Whatever may be your need, we have a solution that’s right for you.
+          Find yourself the most suitable coworking solution.</p>
+      </div>
+
+      <Swiper className=""
+        spaceBetween={30} // Space between cards
+        slidesPerView={3} // Number of visible slides on large screens
+        breakpoints={{
+          320: { slidesPerView: 1 }, // 1 card on mobile
+          768: { slidesPerView: 2 }, // 2 cards on tablets
+          1024: { slidesPerView: 3 }, // 3 cards on desktops
+        }}
+        loop={true} // Enable looping
+       
+       
+        autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay
+        modules={[ Autoplay]} // Pass modules directly here
+      >
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="">
+              <img src='' alt='' />
+              <div>
+                <div>{item.title}</div>
+                <div>{item.text}</div>
+                
+              </div>
+            </div>
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+      </section>
+    </div>
+  )
+}
+
+export default Home;
