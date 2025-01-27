@@ -41,14 +41,17 @@ const Footer = () => {
               <h6 class="widget-title">Quick Links</h6>
               <ul class="fot-list">
                     <li>
+                      <Link to="/">Home</Link>
+                    </li>
+                    <li>
                         <Link to="/about-us">About Us</Link>
                     </li>
                     <li>
                         <Link to="tour-packages">Tour Packages</Link>
                     </li>
-                    <li>
+                    {/* <li>
                         <Link to="destination">Destination</Link>
-                    </li>
+                    </li> */}
                     <li>
                         <Link to="gallery">Gallery</Link>
                     </li>

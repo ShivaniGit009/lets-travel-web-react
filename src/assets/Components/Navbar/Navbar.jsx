@@ -16,14 +16,17 @@ const Navbar = () => {
         <div className='nav-links'>
           <ul>
             <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
               <Link to="/about-us">About Us</Link>
             </li>
             <li>
               <Link to="tour-packages">Tour Packages</Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="destination">Destination</Link>
-            </li>
+            </li> */}
             <li>
               <Link to="gallery">Gallery</Link>
             </li>
@@ -38,7 +41,7 @@ const Navbar = () => {
             <img src="" alt="" />
           </div> */}
           <div className='nav-btn'>
-            <button>Contact Us</button>
+            <button>Enquire Now</button>
           </div>
         </div>
     </div>

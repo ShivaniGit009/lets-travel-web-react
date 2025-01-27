@@ -53,6 +53,28 @@ const data = [
      
   }
 ];
+const review = [
+  {
+      id: 1,
+      reviewname: 'Sarah M.',
+      reviewtext: '" The team at Let’s Travel went above and beyond to ensure my solo trip was safe and enjoyable. They curated an itinerary that matched my interests perfectly! "',
+  },
+  {
+      id: 2,
+      reviewname: 'Rajesh K.',
+      reviewtext: '" Amazing service and hassle-free planning! Let’s Travel helped us explore hidden gems we never would have found on our own. Truly the best travel experience we’ve had! "',
+  },
+  {
+    id: 3,
+    reviewname: 'Emily T.',
+    reviewtext: '" I’ve traveled with several agencies, but Let’s Travel stands out. Their attention to detail and personalized itineraries made our family vacation stress-free and memorable. Highly recommended! "',
+},
+  {
+      id: 4,
+      reviewname: 'Ahmed H.',
+      reviewtext: '" Let’s Travel made our honeymoon truly magical! From seamless planning to unique recommendations, every detail was perfect. We’ll definitely choose them again for our next adventure! "',
+  }
+];
 
 const Home = () => {
   return (
@@ -152,6 +174,40 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <section className="review-sect">
+                <div className="slider-container">
+                    <div className="swiper-container">
+                {/* Title and Description */}
+                <div className=" ">
+                  <h2 className="">Testimonials</h2>
+                </div>
+      
+                <Swiper className=""
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                pagination={{ clickable: true }}
+                  spaceBetween={30} // Space between cards
+                  slidesPerView={3} // Number of visible slides on large screens
+                  breakpoints={{
+                    320: { slidesPerView: 1 }, // 1 card on mobile
+                    768: { slidesPerView: 2 }, // 2 cards on tablets
+                    1024: { slidesPerView: 3 }, // 3 cards on desktops
+                  }}
+                  loop={true} // Enable looping
+                  autoplay={{ delay: 3000, disableOnInteraction: false }} // Autoplay
+                >
+                  {review.map((item, index) => (
+                    <SwiperSlide key={index}>
+                      <div className="reviewm-div">
+                        <p>{item.reviewtext}</p>
+                        <h4>{item.reviewname}</h4>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
+              </div>
+                </div>
+            </section>
 
     </div>
   )

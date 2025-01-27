@@ -38,10 +38,10 @@ const AboutUs = () => {
   return (
     <div>
       <section
-        className="abt-breadcrumb"
+        className="abt-breadcrumb breadcrumb-mb"
         style={{
           backgroundImage: `linear-gradient(0deg, rgb(0 0 0 / 61%), rgb(255 255 255 / 35%)), url(${abtbgImage})`,
-          // backgroundSize: 'cover',
+          backgroundSize: 'cover',
           backgroundPosition: 'center',
           // width: '100%',
           // height: '100%',
