@@ -22,16 +22,16 @@ const Navbar = () => {
               <Link to="/about-us">About Us</Link>
             </li>
             <li>
-              <Link to="tour-packages">Tour Packages</Link>
+              <Link to="/tour-packages">Tour Packages</Link>
             </li>
             {/* <li>
               <Link to="destination">Destination</Link>
             </li> */}
             <li>
-              <Link to="gallery">Gallery</Link>
+              <Link to="/gallery">Gallery</Link>
             </li>
             <li>
-              <Link to="contact-us">Contact Us</Link>
+              <Link to="/contact-us">Contact Us</Link>
             </li>                                       
           </ul>
         </div>
@@ -41,7 +41,9 @@ const Navbar = () => {
             <img src="" alt="" />
           </div> */}
           <div className='nav-btn'>
-            <button>Enquire Now</button>
+          <Link to="/contact-us">
+            Enquire Now
+          </Link>
           </div>
         </div>
     </div>
